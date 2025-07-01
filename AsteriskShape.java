@@ -2,6 +2,7 @@ import java.util.Scanner;
 public class Main{
   public static void main(String[] args){
       Print Print=new Print();
+      PrintPyramid PrintPyramid = new PrintPryramid();
       Scanner scanner =new Scanner(System.in);
       System.out.print("Print Shapes using asterisk\n");
       System.out.println("_________________________________________");
@@ -13,6 +14,9 @@ public class Main{
       
         switch(UserChoice){
           case 1-> Print.triangle();
+          case 2-> System.out.print("Hahahah");
+          case 3-> System.out.print("Gagagaga");
+          case 4-> PrintPyramid.pyramid();
           default -> System.out.print("Invalid input");
         }
         System.out.print("Another one?(y/n): ");
@@ -45,4 +49,18 @@ class Print{
 }
 
             
-            
+class PrintPyramid{
+    void pyramid(){
+        int rows=8;
+        System.out.println("Output);
+        for (int i=0;i<=rows;i++){
+            for (int j=0;j<=(rows-i);j++){
+                System.out.print(" ");
+            }
+            for (int k=0; k<=(2*i)+1;k++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}            
