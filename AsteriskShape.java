@@ -1,0 +1,48 @@
+import java.util.Scanner;
+public class Main{
+  public static void main(String[] args){
+      Print Print=new Print();
+      Scanner scanner =new Scanner(System.in);
+      System.out.print("Print Shapes using asterisk\n");
+      System.out.println("_________________________________________");
+      boolean islooping=true;
+      
+      while (islooping){
+        System.out.print("Choose shape you to print using asterisk;\n1).Right Triangle/n2).Reversed Right Triangle\n3).Diamond\n4).Pyramid\n5).Square\n6).Rectangle\nYour choice: ");
+        int UserChoice=scanner.nextInt();
+      
+        switch(UserChoice){
+          case 1-> Print.triangle();
+          default -> System.out.print("Invalid input");
+        }
+        System.out.print("Another one?(y/n): ");
+        char again=scanner.next().charAt(0);
+        if (again=='n'){
+          islooping=false;
+        }
+        
+        
+      }
+      scanner.close();
+  }
+}
+    
+    
+
+class Print{
+    
+    void triangle(){
+        int rows=8;
+        System.out.println("Output: ");
+        
+        for (int i=0;i<=rows;i++){
+            for (int j=0;j<= i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+            
+            
