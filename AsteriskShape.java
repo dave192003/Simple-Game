@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Main{
+public class AsteriskShape{
   public static void main(String[] args){
       Print Print=new Print();
       PrintPyramid PrintPyramid = new PrintPyramid();
